@@ -86,9 +86,9 @@
   )
 }
 
-// contact-details returns a grid element with neatly organized contact details.
-#let contact-details(contact-options-dict) = {
-  if contact-options-dict.len() == 0 {
+// contactDetails returns a grid element with neatly organized contact details.
+#let contactDetails(contactOptionsDict) = {
+  if contactOptionsDict.len() == 0 {
     return
   }
   let contactOptionKeyToIconMap = (
@@ -101,8 +101,8 @@
   )
 
   // Evenly distribute the contact options among two columns.
-  let contactOptionDictPairs = contact-options-dict.pairs()
-  let midIndex = calc.ceil(contact-options-dict.len() / 2)
+  let contactOptionDictPairs = contactOptionsDict.pairs()
+  let midIndex = calc.ceil(contactOptionsDict.len() / 2)
   let firstColumnContactOptionsDictPairs = contactOptionDictPairs.slice(0, midIndex)
   let secondColumnContactOptionsDictPairs = contactOptionDictPairs.slice(midIndex)
 
@@ -141,7 +141,7 @@
       colors.primary,
       headline(author, job-title, bio, avatar: avatar)
     ),
-    headerRibbon(colors.secondary, contact-details(contact-options))
+    headerRibbon(colors.secondary, contactDetails(contact-options))
   )
 }
 
