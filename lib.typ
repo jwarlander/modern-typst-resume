@@ -190,9 +190,9 @@
 }
 
 // experience-work renders a content block for work experience.
-#let experience-work(..args) = {
-  experience(..args, label: "Achievements/Tasks")
-}
+//#let experience-work(..args) = {
+//  experience(..args, label: "Achievements/Tasks")
+//}
 
 // project renders a content block for a project.
 #let project(title: "", description: "", subtitle: "", date-from: "", date-to: "") = {
